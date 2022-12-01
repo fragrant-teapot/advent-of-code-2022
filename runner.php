@@ -47,6 +47,7 @@ $climate->arguments->add([
         'description' => 'Which day to run',
         'required' => true,
         'castTo' => 'int',
+        'defaultValue' => 0
     ],
 ]);
 $climate->arguments->parse();
