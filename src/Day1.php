@@ -13,16 +13,6 @@ class Day1 implements DayInterface
         $this->elfCalories = $this->parseInput($input);
     }
 
-    public function partOne(): int
-    {
-        return max($this->elfCalories);
-    }
-
-    public function partTwo(): int
-    {
-        return $this->elfCalories[0] + $this->elfCalories[1] + $this->elfCalories[2];
-    }
-
     private function parseInput(string $input): array
     {
         $calories = explode(PHP_EOL, $input);
@@ -41,5 +31,15 @@ class Day1 implements DayInterface
 
         rsort($elfs);
         return $elfs;
+    }
+
+    public function partOne(): int
+    {
+        return max($this->elfCalories);
+    }
+
+    public function partTwo(): int
+    {
+        return $this->elfCalories[0] + $this->elfCalories[1] + $this->elfCalories[2];
     }
 }

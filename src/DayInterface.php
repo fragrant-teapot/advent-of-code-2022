@@ -7,5 +7,6 @@ namespace App;
 interface DayInterface
 {
     public function partOne(): int;
+
     public function partTwo(): int;
 }
