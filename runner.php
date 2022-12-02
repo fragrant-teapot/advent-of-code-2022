@@ -47,7 +47,7 @@ $climate->arguments->add([
         'description' => 'Which day to run',
         'required' => true,
         'castTo' => 'int',
-        'defaultValue' => 0
+        'defaultValue' => 0,
     ],
 ]);
 $climate->arguments->parse();
@@ -89,11 +89,12 @@ $day = match ($climate->arguments->get('day')) {
     default => throw new Exception('Wrong parameter value')
 };
 
-$timeEnd = hrtime(true);
-$executionTime = ($timeEnd - $timeStart) / 1e+6;
 
 $climate->out('Part one result: ' . $day->partOne());
 $climate->out('Part two result: ' . $day->partTwo());
+
+$timeEnd = hrtime(true);
+$executionTime = ($timeEnd - $timeStart) / 1e+6;
 
 $climate->out(
     sprintf(

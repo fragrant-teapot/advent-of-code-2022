@@ -13,7 +13,6 @@ B X
 C Z
 EOD;
 
-
     private Day2 $day2;
 
     protected function setUp(): void
