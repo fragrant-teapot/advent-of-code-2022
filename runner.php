@@ -63,7 +63,7 @@ $day = match ($climate->arguments->get('day')) {
     0 => '', // todo Add all days runner
     1 => new Day1(file_get_contents(__DIR__ . '/input/day1/input')),
     2 => new Day2(file_get_contents(__DIR__ . '/input/day2/input')),
-    3 => new Day3(),
+    3 => new Day3(file_get_contents(__DIR__ . '/input/day3/input')),
     4 => new Day4(),
     5 => new Day5(),
     6 => new Day6(),
@@ -88,7 +88,6 @@ $day = match ($climate->arguments->get('day')) {
     25 => new Day25(),
     default => throw new Exception('Wrong parameter value')
 };
-
 
 $climate->out('Part one result: ' . $day->partOne());
 $climate->out('Part two result: ' . $day->partTwo());
